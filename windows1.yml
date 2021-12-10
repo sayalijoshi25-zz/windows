@@ -1,6 +1,6 @@
 ---
 - name: week5
-  hosts: win
+  hosts: all
   tasks:
    - name: Set timezone to 'GMT Standard Time' (GMT)
      win_timezone:
