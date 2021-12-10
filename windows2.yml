@@ -1,0 +1,34 @@
+---
+- name: week5 task
+  hosts: win
+  tasks:
+   
+    - name: Copy a single file
+      win_copy:
+       src: /srv/myfiles/foo.conf
+       dest: c:\Temp\renamed-foo.conf
+   - name: Find files in path
+     ansible.windows.win_find:
+       paths: c:\Temp\renamed-foo.conf
+   - win_lineinfile:
+       path: c:\Temp\renamed-foo.conf
+       regexp: '^name='
+       line: 'name=JohnDoe'
+       
+       
+   - name: Create a new group
+     ansible.windows.win_group:
+       name: deploy
+       description: Deploy Group
+       state: present 
+       
+       
+   - name: Ensure user bob is present
+     ansible.windows.win_user:
+        name: bob
+        password: B0bP4ssw0rd
+        state: present
+        groups:
+          - Users
+
+     
