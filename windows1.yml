@@ -11,6 +11,8 @@
          - SecurityUpdates
          - CriticalUpdates
          - UpdateRollups
+       reboot: yes
+  
 
    - name: Install git
      win_chocolatey:
