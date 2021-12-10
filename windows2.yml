@@ -7,11 +7,11 @@
   
     - name: Copy a single file
       win_copy:
-        src: /srv/myfiles/foo.conf
-        dest: c:\Temp\renamed-foo.conf
+        src: /tmp/index.text
+        dest: c:\Temp\renamed.text
        
     - win_lineinfile:
-        path: c:\Temp\renamed-foo.conf
+        path: c:\Temp\renamed.text
         regexp: '^name='
         line: 'name=JohnDoe'
        
