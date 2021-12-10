@@ -9,7 +9,7 @@
        dest: c:\Temp\renamed-foo.conf
        
     - name: Find files in path
-      ansible.windows.win_find:
+      win_find:
         paths: c:\Temp\renamed-foo.conf
        
     - win_lineinfile:
@@ -19,13 +19,13 @@
        
        
     - name: Create a new group
-      ansible.windows.win_group:
+      win_group:
         name: deploy
         description: Deploy Group
         state: present 
     
     - name: Ensure user bob is present
-      ansible.windows.win_user:
+      win_user:
         name: bob
         state: present
         
