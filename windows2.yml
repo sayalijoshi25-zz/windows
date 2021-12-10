@@ -5,10 +5,11 @@
   
   
   
-    - name: Copy a single file
+    - name: Copy a single file where the source is on the remote host
       win_copy:
-        src: /tmp/index.text
-        dest: c:\Temp\renamed.text
+       src: C:\Temp\foo.txt
+       dest: C:\ansible\foo.txt
+       remote_src: yes
        
     - win_lineinfile:
         path: c:\Temp\renamed.text
