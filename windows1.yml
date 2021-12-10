@@ -1,5 +1,5 @@
 ---
-- name: week5 
+- name: week5
   hosts: all
   tasks:
    - name: Set timezone to 'GMT Standard Time' (GMT)
@@ -12,17 +12,13 @@
          - CriticalUpdates
          - UpdateRollups
        reboot: yes
+
+
    - name: Install git
      win_chocolatey:
-       name: git
+       name:
+         - git
+         - notepadplusplus
        state: present
 
-   - name: Upgrade installed packages
-     win_chocolatey:
-       name: all
-       state: latest
-
-   - name: Install notepadplusplus version 6.6
-     win_chocolatey:
-      name: notepadplusplus.install
-      version: '6.6'
+~                                        
