@@ -8,24 +8,24 @@
        src: /srv/myfiles/foo.conf
        dest: c:\Temp\renamed-foo.conf
        
-   - name: Find files in path
-     ansible.windows.win_find:
-       paths: c:\Temp\renamed-foo.conf
+    - name: Find files in path
+      ansible.windows.win_find:
+        paths: c:\Temp\renamed-foo.conf
        
-   - win_lineinfile:
-       path: c:\Temp\renamed-foo.conf
-       regexp: '^name='
-       line: 'name=JohnDoe'
+    - win_lineinfile:
+        path: c:\Temp\renamed-foo.conf
+        regexp: '^name='
+        line: 'name=JohnDoe'
        
        
-   - name: Create a new group
-     ansible.windows.win_group:
-       name: deploy
-       description: Deploy Group
-       state: present 
+    - name: Create a new group
+      ansible.windows.win_group:
+        name: deploy
+        description: Deploy Group
+        state: present 
     
-   - name: Ensure user bob is present
-     ansible.windows.win_user:
+    - name: Ensure user bob is present
+      ansible.windows.win_user:
         name: bob
         state: present
         
