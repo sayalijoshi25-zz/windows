@@ -1,6 +1,6 @@
 ---
 - name: week5
-  hosts: all
+  hosts: win
   tasks:
    - name: Set timezone to 'GMT Standard Time' (GMT)
      win_timezone:
@@ -21,4 +21,4 @@
          - notepadplusplus
        state: present
 
-~                                        
+                                      
