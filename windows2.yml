@@ -1,26 +1,6 @@
 - hosts: win
   tasks:
-  - name: Example from an Ansible Playbook
-    win_ping:
-    register: myconfig
-    
-  - debug:
-     var: myconfig
-  
-  - name: Copy a single file
-    win_copy:
-      src: hello.txt
-      dest: C:\Users\Administrator\Desktop\
-
-  - name: Find files in path
-    win_find:
-       paths: C:\Users\Administrator\Desktop\hello.txt
-      
-  - name: Updating the content
-    win_lineinfile:
-       - hosts: win
-  tasks:
-  - name: Example from an Ansible Playbook
+  - name: Playbook
     win_ping:
     register: myconfig
     
