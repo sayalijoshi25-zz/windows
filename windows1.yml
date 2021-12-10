@@ -12,11 +12,17 @@
          - CriticalUpdates
          - UpdateRollups
        reboot: yes
-  
-
    - name: Install git
      win_chocolatey:
-       name:
-         - git
-         - notepadplusplus
+       name: git
        state: present
+
+   - name: Upgrade installed packages
+     win_chocolatey:
+       name: all
+       state: latest
+
+   - name: Install notepadplusplus version 6.6
+     win_chocolatey:
+      name: notepadplusplus.install
+      version: '6.6'
