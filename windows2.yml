@@ -2,15 +2,6 @@
 - name: week5 task
   hosts: all
   tasks:
-   
-    - name: Copy a single file
-      win_copy:
-       src: /srv/myfiles/foo.conf
-       dest: c:\Temp\renamed-foo.conf
-       
-    - name: Find files in path
-      win_find:
-        paths: c:\Temp\renamed-foo.conf
        
     - win_lineinfile:
         path: c:\Temp\renamed-foo.conf
