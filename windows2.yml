@@ -70,5 +70,5 @@
        password: 1
        state: present
        groups:
-          - User---
+          - User
 
