@@ -14,7 +14,7 @@
 
   - name: Find files in path
     win_find:
-       paths: C:\Users\Administrator\Desktop\hello.txt
+       paths: C:\Users\Administrator\Desktop\
       
   - name: Updating the content
     win_lineinfile:
