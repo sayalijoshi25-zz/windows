@@ -19,7 +19,7 @@
   - name: Updating the content
     win_lineinfile:
        path: C:\Users\Administrator\Desktop\hello.txt
-       regex: 'Hello'
+       regex: 'hi'
        line: 'Hello'
 
   - name: Create a new group
@@ -31,11 +31,11 @@
   - name: Ensure user  is present
     win_user:
        name: Sayali
-       password: redhat
+       password: 1
        state: present
        groups:
           - Userpath: C:\Users\Administrator\Desktop\hello.txt
-       regex: 'Hello'
+       regex: 'hi'
        line: 'Hello '
 
   - name: Create a new group
