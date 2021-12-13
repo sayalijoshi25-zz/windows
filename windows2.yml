@@ -25,7 +25,7 @@
   - name: Ensure user  is present
     win_user:
        name: Sayali
-       password: 1
+       password: Redhat@123
        state: present
 
   - name: Create a new group
