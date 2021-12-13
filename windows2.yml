@@ -22,21 +22,11 @@
        regex: 'hi'
        line: 'Hello'
 
-  - name: Create a new group
-    win_group:
-       name: User
-       description: 'Users Group '
-       state: present     
-
   - name: Ensure user  is present
     win_user:
        name: Sayali
        password: 1
        state: present
-       groups:
-          - Userpath: C:\Users\Administrator\Desktop\hello.txt
-       regex: 'hi'
-       line: 'Hello '
 
   - name: Create a new group
     win_group:
@@ -44,11 +34,4 @@
        description: 'Users Group'
        state: present     
 
-  - name: Ensure user is present
-    win_user:
-       name: sayali
-       password: 1
-       state: present
-       groups:
-          - User
 
